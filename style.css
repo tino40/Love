@@ -1,0 +1,936 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+   
+    
+}
+
+
+#Home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(110, 192, 224);
+}
+
+.envelope{
+    position: relative;
+    cursor: pointer;
+}
+
+.back{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #6247aa;
+}
+
+.front{
+    position: absolute;
+    border-right: 130px solid #815ac0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 120px;
+    z-index: 3;
+}
+
+.front:before{
+    content: "";
+    position: absolute; 
+    border-left: 130px solid #815ac0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: -100px;
+    left: -120px;
+}
+
+.front:after{
+    content: '';
+    position: absolute; 
+    border-bottom: 105px solid #7251b5;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -120px;
+}
+
+.top{
+    position: absolute;
+    border-top: 105px solid #9163cb;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    transform-origin: top;
+    transition: 0.4s;
+}
+
+.envelope:hover .top{
+    transform: rotateX(100deg);
+}
+
+.letter{
+    position: absolute;
+    background: #fff;
+    width: 230px;
+    height: 165px;
+    top: 20px;
+    left: 10px;
+    transition: 0.2s;
+}
+
+.envelope:hover .letter{
+    transform: translateY(-100px);
+    z-index: 2;
+}
+
+.text1{
+    position: absolute;
+    color: #681785;
+    font-family: sans-serif;
+    top: -65%;
+    font-size: 8.5px;
+}
+
+.text{
+   text-align: center;
+   font-size: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 20px;
+   font-weight: bold;
+   color: #000;
+   position: relative;
+   top: -20px;
+   left: 20px;
+
+}
+button{
+    background-color: #7251b5;
+    border-radius: 4px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 12%;
+   left: 50%;
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*------heart------*/
+.heart{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    transform: rotate(-45deg);
+    box-shadow: -5px 10px 90px red;
+animation: MyChargie 0.6s linear infinite;
+}
+
+@keyframes MyChargie{
+ 0%{
+    transform: rotate(-45deg) scale(1.07);
+ } 
+ 70%{
+    transform: rotate(-45deg) scale(1.0);
+ }   
+100%{
+    transform: rotate(-45deg) scale(0.08);
+ } 
+} 
+
+.heart:before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    top: -40px;
+    border-radius: 50px;
+}
+
+.heart:after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    right: -40px;
+    border-radius: 50px;
+}
+
+
+#animate{
+    font-style: Arial;
+    background: rgb(110, 192, 224);
+    
+}
+
+.animation-box{
+    width: 75%;
+    height: 27.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.first-text{
+    font-size: 2rem;
+    color: #971818;
+    position: absolute;
+    left: 2.5rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie1;
+    animation-duration: 25s;
+    animation-delay: 40s;
+ 
+}
+
+.second-text{
+    font-size: 2rem;
+    color: #b11c1c;
+    position: absolute;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie2;
+    animation-duration: 28s;
+    animation-delay: 60s;
+}
+.third-text{
+    font-size: 2rem;
+    color: #ae370b;
+    position: absolute;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie3;
+    animation-duration: 20s;
+    animation-delay: 80s;
+}
+.fourth-text{
+    font-size: 2rem;
+    color: rgb(54, 26, 106);
+    position: absolute;
+    left: 10%;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie4;
+    animation-duration: 30s;
+    animation-delay: 90s;
+}
+.fifth-text{
+    font-size: 2rem;
+    color: #94431bf0;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    animation-name: MyChargie5;
+    animation-duration: 40s;
+    animation-delay: 110s;
+}
+
+@keyframes MyChargie1{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie2{
+    0%{
+        top: -2rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie3{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie4{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie5{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 991px) {
+    
+    #Home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: rgb(110, 192, 224);
+    }
+    
+    .envelope{
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .back{
+        position: relative;
+        width: 250px;
+        height: 200px;
+        background: #6247aa;
+    }
+    
+    .front{
+        position: absolute;
+        border-right: 130px solid #815ac0;
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+        height: 0;
+        width: 0;
+        top: 0;
+        left: 120px;
+        z-index: 3;
+    }
+    
+    .front:before{
+        content: "";
+        position: absolute; 
+        border-left: 130px solid #815ac0;
+        border-top: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+        height: 0;
+        width: 0;
+        top: -100px;
+        left: -120px;
+    }
+    
+    .front:after{
+        content: '';
+        position: absolute; 
+        border-bottom: 105px solid #7251b5;
+        border-left: 125px solid transparent;
+        border-right: 125px solid transparent;
+        height: 0;
+        width: 0;
+        top: -5px;
+        left: -120px;
+    }
+    
+    .top{
+        position: absolute;
+        border-top: 105px solid #9163cb;
+        border-left: 125px solid transparent;
+        border-right: 125px solid transparent;
+        height: 0;
+        width: 0;
+        top: 0;
+        transform-origin: top;
+        transition: 0.4s;
+    }
+    
+    .envelope:hover .top{
+        transform: rotateX(100deg);
+    }
+    
+    .letter{
+        position: absolute;
+        background: #fff;
+        width: 230px;
+        height: 165px;
+        top: 20px;
+        left: 10px;
+        transition: 0.2s;
+    }
+    
+    .envelope:hover .letter{
+        transform: translateY(-100px);
+        z-index: 2;
+    }
+    
+    .text1{
+        position: absolute;
+        color: #681785;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        top: -65%;
+        font-size: 8.5px;
+    }
+    
+    .text{
+       text-align: center;
+       text-transform: capitalize;
+       font-size: 10px;
+       font-family: Arial, Helvetica, sans-serif;
+       margin-top: 20px;
+       font-weight: bold;
+       color: #000;
+       position: relative;
+       top: -20px;
+       left: 20px;
+    
+    }
+    button{
+        background-color: #7251b5;
+        border-radius: 4px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        bottom: 12%;
+       left: 50%;
+        padding: 20px 30px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    /*------heart------*/
+    .heart{
+        background-color: red;
+        height: 70px;
+        width: 70px;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        transform: rotate(-45deg);
+        box-shadow: -5px 10px 90px red;
+    animation: MyChargie 0.6s linear infinite;
+    }
+    
+    @keyframes MyChargie{
+     0%{
+        transform: rotate(-45deg) scale(1.07);
+     } 
+     70%{
+        transform: rotate(-45deg) scale(1.0);
+     }   
+    100%{
+        transform: rotate(-45deg) scale(0.08);
+     } 
+    } 
+    
+    .heart:before{
+        content: '';
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        background-color: red;
+        top: -40px;
+        border-radius: 50px;
+    }
+    
+    .heart:after{
+        content: '';
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        background-color: red;
+        right: -40px;
+        border-radius: 50px;
+    }
+    
+    
+    #animate{
+        font-style: Arial;
+        background: rgb(110, 192, 224);
+        
+    }
+    
+    .animation-box{
+        width: 75%;
+        height: 40.5rem;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .first-text{
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: #971818;
+        position: absolute;
+        left: 2.5rem;
+        top: 3rem;
+        opacity: 0;
+        animation-name: MyChargie1;
+        animation-duration: 25s;
+        animation-delay: 40s;
+     
+    }
+    
+    .second-text{
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: #b11c1c;
+        position: absolute;
+        top: 4rem;
+        opacity: 0;
+        animation-name: MyChargie2;
+        animation-duration: 30s;
+        animation-delay: 60s;
+    }
+    .third-text{
+        font-size: 2rem;
+        color: #ae370b;
+        text-transform: capitalize;
+        position: absolute;
+        top: 4rem;
+        opacity: 0;
+        animation-name: MyChargie3;
+        animation-duration: 20s;
+        animation-delay: 80s;
+    }
+    .fourth-text{
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: rgb(54, 26, 106);
+        position: absolute;
+        left: 10%;
+        top: 4rem;
+        opacity: 0;
+        animation-name: MyChargie4;
+        animation-duration: 30s;
+        animation-delay: 95s;
+    }
+    .fifth-text{
+        font-size: 2rem;
+        color: #94431bf0;
+        position: absolute;
+        text-transform: capitalize;
+        left: 5%;
+        bottom: 25%;
+        opacity: 0;
+        animation-name: MyChargie5;
+        animation-duration: 40s;
+        animation-delay: 110s;
+    }
+    
+    @keyframes MyChargie1{
+        0%{
+            top: -3rem;
+            opacity: 0;
+        }
+        75%{
+            top: 25%;
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes MyChargie2{
+        0%{
+            top: -2rem;
+            opacity: 0;
+        }
+        75%{
+            top: 25%;
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes MyChargie3{
+        0%{
+            top: -3rem;
+            opacity: 0;
+        }
+        75%{
+            top: 25%;
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes MyChargie4{
+        0%{
+            top: -3rem;
+            opacity: 0;
+        }
+        75%{
+            top: 25%;
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes MyChargie5{
+        0%{
+            top: -3rem;
+            opacity: 0;
+        }
+        75%{
+            top: 25%;
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+   
+#Home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(110, 192, 224);
+}
+
+.envelope{
+    position: relative;
+    cursor: pointer;
+}
+
+.back{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background: #6247aa;
+}
+
+.front{
+    position: absolute;
+    border-right: 130px solid #815ac0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 120px;
+    z-index: 3;
+}
+
+.front:before{
+    content: "";
+    position: absolute; 
+    border-left: 130px solid #815ac0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: -100px;
+    left: -120px;
+}
+
+.front:after{
+    content: '';
+    position: absolute; 
+    border-bottom: 105px solid #7251b5;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -120px;
+}
+
+.top{
+    position: absolute;
+    border-top: 105px solid #9163cb;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    transform-origin: top;
+    transition: 0.4s;
+}
+
+.envelope:hover .top{
+    transform: rotateX(100deg);
+}
+
+.letter{
+    position: absolute;
+    background: #fff;
+    width: 230px;
+    height: 165px;
+    top: 20px;
+    left: 10px;
+    transition: 0.2s;
+}
+
+.envelope:hover .letter{
+    transform: translateY(-100px);
+    z-index: 2;
+}
+
+.text1{
+    position: absolute;
+    color: #681785;
+    font-family: sans-serif;
+    top: -65%;
+    font-size: 8.5px;
+}
+
+.text{
+   text-align: center;
+   font-size: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 20px;
+   font-weight: bold;
+   color: #000;
+   position: relative;
+   top: -20px;
+   left: 20px;
+
+}
+button{
+    background-color: #7251b5;
+    border-radius: 4px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 12%;
+   left: 50%;
+    padding: 20px 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*------heart------*/
+.heart{
+    background-color: red;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    transform: rotate(-45deg);
+    box-shadow: -5px 10px 90px red;
+animation: MyChargie 0.6s linear infinite;
+}
+
+@keyframes MyChargie{
+ 0%{
+    transform: rotate(-45deg) scale(1.07);
+ } 
+ 70%{
+    transform: rotate(-45deg) scale(1.0);
+ }   
+100%{
+    transform: rotate(-45deg) scale(0.08);
+ } 
+} 
+
+.heart:before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    top: -40px;
+    border-radius: 50px;
+}
+
+.heart:after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    right: -40px;
+    border-radius: 50px;
+}
+
+
+#animate{
+    font-style: Arial;
+    background: rgb(110, 192, 224);
+    
+}
+
+.animation-box{
+    width: 75%;
+    height: 27.5rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.first-text{
+    font-size: 2rem;
+    color: #971818;
+    position: absolute;
+    left: 2.5rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie1;
+    animation-duration: 25s;
+    animation-delay: 40s;
+ 
+}
+
+.second-text{
+    font-size: 2rem;
+    color: #b11c1c;
+    position: absolute;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie2;
+    animation-duration: 30s;
+    animation-delay: 60s;
+}
+.third-text{
+    font-size: 2rem;
+    color: #ae370b;
+    position: absolute;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie3;
+    animation-duration: 25s;
+    animation-delay: 80s;
+}
+.fourth-text{
+    font-size: 2rem;
+    color: rgb(54, 26, 106);
+    position: absolute;
+    left: 10%;
+    top: 5rem;
+    opacity: 0;
+    animation-name: MyChargie4;
+    animation-duration: 30s;
+    animation-delay: 90s;
+}
+.fifth-text{
+    font-size: 2rem;
+    color: #94431bf0;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    animation-name: MyChargie5;
+    animation-duration: 30s;
+    animation-delay: 110s;
+}
+
+@keyframes MyChargie1{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie2{
+    0%{
+        top: -2rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie3{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie4{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes MyChargie5{
+    0%{
+        top: -3rem;
+        opacity: 0;
+    }
+    75%{
+        top: 25%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+}
